@@ -1,0 +1,5651 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="A new project generated from the default template project.">
+      
+      
+        <meta name="author" content="<your name here>">
+      
+      
+      
+        <link rel="prev" href="../c-signal-and-exception/">
+      
+      
+        <link rel="next" href="../carry-bit-overflow-bit/">
+      
+      
+        
+      
+      
+      <link rel="icon" href="../assets/images/favicon.png">
+      <meta name="generator" content="zensical-0.0.5">
+    
+    
+      
+        <title>calculus learning - Documentation</title>
+      
+    
+    
+      
+        
+      
+      <link rel="stylesheet" href="../assets/stylesheets/modern/main.1357c24d.min.css">
+      
+        
+          
+        
+        <link rel="stylesheet" href="../assets/stylesheets/modern/palette.dfe2e883.min.css">
+      
+      
+  
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+  
+  <style>:root{}</style>
+
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Inter:300,300i,400,400i,500,500i,700,700i%7CJetBrains+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Inter";--md-code-font:"JetBrains Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#calculus-learning" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href=".." title="Documentation" class="md-header__button md-logo" aria-label="Documentation" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="lucide lucide-book-open" viewBox="0 0 24 24"><path d="M12 7v14M3 18a1 1 0 0 1-1-1V4a1 1 0 0 1 1-1h5a4 4 0 0 1 4 4 4 4 0 0 1 4-4h5a1 1 0 0 1 1 1v13a1 1 0 0 1-1 1h-6a3 3 0 0 0-3 3 3 3 0 0 0-3-3z"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="lucide lucide-menu" viewBox="0 0 24 24"><path d="M4 5h16M4 12h16M4 19h16"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Documentation
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              calculus learning
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="none" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="lucide lucide-sun" viewBox="0 0 24 24"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M6.34 17.66l-1.41 1.41M19.07 4.93l-1.41 1.41"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="none" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="lucide lucide-moon" viewBox="0 0 24 24"><path d="M20.985 12.486a9 9 0 1 1-9.473-9.472c.405-.022.617.46.402.803a6 6 0 0 0 8.268 8.268c.344-.215.825-.004.803.401"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="lucide lucide-search" viewBox="0 0 24 24"><path d="m21 21-4.34-4.34"/><circle cx="11" cy="11" r="8"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog" aria-label="Search">
+  <button type="button" class="md-search__button">
+    Search
+  </button>
+</div>
+      
+    
+    <div class="md-header__source">
+      
+    </div>
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="Documentation" class="md-nav__button md-logo" aria-label="Documentation" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="lucide lucide-book-open" viewBox="0 0 24 24"><path d="M12 7v14M3 18a1 1 0 0 1-1-1V4a1 1 0 0 1 1-1h5a4 4 0 0 1 4 4 4 4 0 0 1 4-4h5a1 1 0 0 1 1 1v13a1 1 0 0 1-1 1h-6a3 3 0 0 0-3 3 3 3 0 0 0-3-3z"/></svg>
+
+    </a>
+    Documentation
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Welcome
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../AI%E5%AF%BC%E6%95%B0%E4%B8%8D%E5%AE%9A%E7%A7%AF%E5%88%86%E5%92%8C%E5%AE%9A%E7%A7%AF%E5%88%86/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    计算函数x^2在区间0到1之间的积分
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../EVS_dec%E4%BD%BF%E7%94%A8%E6%96%B9%E6%B3%95/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    EVS_dec使用方法
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Install-KVM-on-Debian-of-aarch64-architecture/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Install KVM on Debian of aarch64 architecture
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Learn%20English%20Conjunction%20words/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    连词和复合句
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Learn%20GPIO/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Learn GPIO
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Learn%20Midi/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Learn Midi
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Linux-Interrupts/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Linux 中断请求
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Non-constant%20time%20of%20comparation/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Non-constant time comparison bug
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../a-FakeIt-issue/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    记一个FakeIt使用问题
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../acronyms/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    database acronyms
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../adb%20remote%20forward/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    adb remote forward
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../add-printer-in-linux/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    add printer in linux
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../advanced-marco-in-c/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    advanced marco in c
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../airplay-receiver-in-Linux/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Linux模拟airplay接收器
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../aliyun-dynamic-dns/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    阿里云动态设置 dns
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../amrnb-and-amrwb/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    amrnb和amrwb的编解码
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../aria2c%20usage/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    aria2c usage
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../bash-envioirment/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    bash 环境变量
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../bash-learning/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    bash learning
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../bash-safe/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    bash safety
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../binary-tree-traversal/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    binary tree traversal
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../boost-di-learning/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    boost::di learning
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../buffer-cache-too-high/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    buffer-cache too high
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../buffer-stdbuf/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    输出缓冲和stdbuf
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../build-a-spider/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    爬虫
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../c-signal-and-exception/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    c++ 信号和异常
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    calculus learning
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../carry-bit-overflow-bit/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    进位位和溢出位(carry bit/overflow bit)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../change%20hostname%20of%20pve%20and%20vm/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    change hostname of pve and vm
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../cmake-learning/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    cmake learning
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../cmake-precompile-header/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    cmake precompile header
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../configure%20dns%20for%20pve/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    为pve配置dns
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../connect_raspberry_to_arduino_via_i2c/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    connect raspberry and arduino via i2c
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../container-tech/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    容器的命名空间
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../cpp-cas/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    CPP原子操作
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../cpp-template-programing/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    模板编程
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../cpp/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    C++ 小技巧
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../crash-boot/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    crash boot
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../create%20cli%20use%20typescript/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    implement cli use typescript
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../create-loop-block/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    在文件系统之上再创一个文件系统
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../crontab-manual/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Linux定时器
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ddns/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Ddns
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../defualt%20route%20in%20linux/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    defualt route in linux
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../docker-network/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    docker network
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../docker-overlay-filesystem/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    docker overlay filesystem
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../docker-storage/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    docker storage
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../download%20music%20to%20ipod%20shuffle%204/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    download music to ipod shuffle 4
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../dp-programming/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    DP 四板斧
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../dpdk%20test%20speed/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    dpdk-testpmd to test NIC speed
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../effective-cpp/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    effective cpp
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../entrypointandcmdindockerfile/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Dockerfile 中ENTRYPOINT和CMD的区别
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../esp32/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    玩转ESP32
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ffmpeg-AVCodecContext/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    libavcodec使用
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../firefox-manual-add-search-engine/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    firefox 启用手动添加搜索引擎
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../format-in-c/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    在c语言中打印支持不同类型变量
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../gcc-optimize-memory-function/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    gcc 会优化很多内存相关的调用
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../gdb/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    gdb调试容器内的进程
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../generate%20compile_commands%20json/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    ways of generating compile command json file
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../generate%20random%20number/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    generate random number
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../get%20fd%20in%20the%20other%20process/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    获取其他进程打开的文件描述符
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../gitcommand/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Git的重要操作
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../go-learning/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    go 学习笔记
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../grammer-noun-of-noun/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    语法规则-名词修饰名词
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../grpc-callback-api/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    grpc callback api
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../grpc-learning/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    grpc 学习
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../guitar/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    吉他学习
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../hash/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    hash
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../heap-sort/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    堆排序
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../huawei-change-rom/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    huawei change rom
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../huawei-unlock-bootloader/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    huawei unlock bootloader
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ibus-setup/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    ibus-setup
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../install-k8s-cluster/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    搭建k8s集群
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../install-wordpress/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    安装wordpress记录
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ipsec/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    ipsec 和 vowifi
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../iptables-forward/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Linux创建热点
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../iwd-ap/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    使用iwd创建ap热点
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../kmp-substring-searching-algorithm/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    kmp 子串查找算法
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../learn%20fastapi/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    learn fastapi
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../learn%20geo%20ip/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    learn geo ip
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../learn%20ip%20header/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    learn ip header
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../learning%20lisp/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    arc 是lisp一种方言，通用编程语言。
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../linux-perm/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    linux 权限位
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../linux-reset-password/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    rhel系列修改密码
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../lvm/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    LVM 功能介绍
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../lxc%20enable%20tun%20device/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    lxc enable tun device
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../mail-setup/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    mail setup
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../manage-temporary-file-with-systemd-tmpfiles/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    使用systemd-tmpfiles来管理临时文件
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../markdown/" class="md-nav__link">
+        
+  
+  
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M22.27 19.385H1.73A1.73 1.73 0 0 1 0 17.655V6.345a1.73 1.73 0 0 1 1.73-1.73h20.54A1.73 1.73 0 0 1 24 6.345v11.308a1.73 1.73 0 0 1-1.73 1.731zM5.769 15.923v-4.5l2.308 2.885 2.307-2.885v4.5h2.308V8.078h-2.308l-2.307 2.885-2.308-2.885H3.46v7.847zM21.232 12h-2.309V8.077h-2.307V12h-2.308l3.461 4.039z"/></svg>
+  
+  <span class="md-ellipsis">
+    
+  
+    Markdown in 5min
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../memory-management/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    浅谈内存管理
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../miniserve/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    网络文件浏览器
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../mutex-error/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    mutex error
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../my-urxvt/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    urxvt配置
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../mysql-statements-execution-order/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    mysql sql语句优先级
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../nginx-fails-to-connect-to-unix-socket/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    记录在部署一个nginx fastcgi 项目时失败， fastcgi 通过unix socket 通讯
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../notes/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Notes
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../oauth2/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    oauth2 认证说明
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../optarg-in-gdb/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    gdb中打印optarg永远是0x0, 但是依然能传递参数
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../package-problem/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    背包问题
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../passthrough/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    pci passthrough
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../pessimistic-lock-optimistic-lock/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    乐观锁悲观锁
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../pointer/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    c语言中pointer和array的区别
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../power-and-logarithm/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    指数和对数
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../pricious/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    编程语言中小数精度问题
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../pve-usage/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    pve入门
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../python-arguement-types/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    python arguement types
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../python-namespace/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    namespace 介绍
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../python-package-1/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    python package2
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../python-package/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    python 包的管理
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../python-setuptools/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    setuptools 是disutils 的升级版。
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../python-wraper/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    python decoder 介绍
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../rancher-learn/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    rancher-learn
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../reg-match/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    使用正则来校验输入合法性
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../register/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    c 中 register 关键字
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../resize-windows-disk-pve/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    pve中给windows扩容
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../rhce8-question/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    记录一下rhce8上课笔记
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../rotate-list/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    单向链表翻转算法
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../run%20docker%20in%20pve%20vm/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    difference of lxc container and docker container
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../run%20vllm%20locally/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    run vllm Qwen3 locally
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../sdcc-compile-for-51/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    在Linux下使用sdcc进行单片机编译
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../sed-vim-difference/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    sed和vim替换文本的小区别
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../segmentation-fault-in-dmesg/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    segfault in dmesg
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../serialized-and-deserialize/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    序列化和反序列化
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../setup-printer-use-avahi/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    使用avahi将传统打印机支持无线打印
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../setup-sftp-service/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    setup sftp service
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../setup-vue2/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    初始化vue2
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../shared-pointer/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    智能指针
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../shell-file-operation/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    shell 中文件操作接口
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../shell-scripts-learning/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    shell 笔记
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../small-string-optimization-in-c/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    c++的basic_string优化
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../spdlog-learn/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    spdlog learning
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../sql-learning/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    数据库优化总结
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../sql-operator-priority/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    SQL优先级问题
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../static-compile-warning-if-namespace-resolving-function-used/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    static compile warning if namespace resolving function used
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../storage-duration/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    c++ 存储周期、链接和作用域
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../streaming-h264-with-rtp/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    streaming h264 with rtp
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../subprocess/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    linux子进程使用方法
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../system-calls-method/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    system calls method
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../systemd%20socket/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    systemd socket 服务
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../systemd-service/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    创建 systemd 服务
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../tailcale/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    tailscale 使用记录
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../temporary-object-and-reference/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    右值, 临时变量与引用
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../text%20process/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Linux 文本处理三剑客
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../thread-local-variable/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    线程局部变量
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../udp-loader-balance/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    udp 的端口复用实现负载均衡
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../udp-statistic/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    udp 查看统计的方法
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../use-mdns-in-systemd-networkd/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    使用systemd-resolved的mdns
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../virtio%20nic%20configure%20multi-queue/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    virtio nic configure multi-queue
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../virtio-learning/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    virtio learning
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../vulnerable-case/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    主要收集一些常见缺陷和加固方法
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ways-to-use-third-party-library-in-cmake/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    cmake 使用第三方库
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../website%20status%20announce/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    website status announce
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../weechat-manual/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    weechat 使用方法
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../wifi-tool/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    随身wifi工具刷机
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_155" >
+        
+          
+          <label class="md-nav__link" for="__nav_155" id="__nav_155_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Drafts
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_155_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_155">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Drafts
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../drafts/familly%20funcion%20of%20exec/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    exec family functions
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../drafts/isatty/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    isatty 打印日志
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../drafts/learn%20asm/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    asm learning
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../drafts/learning%20dtmf/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    非常渴望学习FFT
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_156" >
+        
+          
+          <label class="md-nav__link" for="__nav_156" id="__nav_156_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Rhce8
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_156_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_156">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Rhce8
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../rhce8/rhce8/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    rhce8 考试记录
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../rhce8/rhce_course_name/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    00 Introduction
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+<nav class="md-nav md-nav--secondary" aria-label="On this page">
+  
+  
+  
+    
+  
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+                
+
+
+
+  
+
+
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+<h1 id="calculus-learning">calculus learning<a class="headerlink" href="#calculus-learning" title="Permanent link">&para;</a></h1>
+<h1 id="x201">计算函数x^2在区间0到1之间的积分<a class="headerlink" href="#x201" title="Permanent link">&para;</a></h1>
+<p>要计算函数f(x)=x²在区间[0,1]上的定积分，我们可以使用积分的基本公式：</p>
+<p>∫(从0到1) x² dx = [x³/3]从0到1 = (1³/3) - (0³/3) = &#8531;</p>
+<p>因此，x²在0到1区间内的积分结果是&#8531;。这个结果表示函数曲线与x轴在该区间内围成的面积为&#8531;个平方单位。</p>
+<h1 id="x2">函数x^2的导函数<a class="headerlink" href="#x2" title="Permanent link">&para;</a></h1>
+<p>函数f(x) = x²的导函数可以通过求导法则计算：</p>
+<p>使用幂函数求导法则：d/dx(xⁿ) = n·xⁿ⁻¹</p>
+<p>因此：<br />
+f'(x) = d/dx(x²) = 2x</p>
+<p>所以，x²的导函数是2x。这个结果表示原函数在任意点x处的瞬时变化率。</p>
+<p>x²的导数2x表示什么？</p>
+<p>x²的二阶导数是什么？</p>
+<p>再给我几个类似x²的导数例子</p>
+<h1 id="_1">导函数和积分函数的关系<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h1>
+<h2 id="_2">第一部分：导数和不定积分的互逆关系<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h2>
+<ol>
+<li>
+<p>‌<strong>不定积分是导数的“逆运算”：</strong>‌</p>
+</li>
+<li>
+<p>如果 <code>F(x)</code> 是函数 <code>f(x)</code> 的一个‌<strong>原函数（或称反导数）</strong>‌，即 <code>F'(x) = f(x)</code>，那么函数 <code>f(x)</code> 的‌<strong>不定积分</strong>‌定义为所有原函数的集合，表示为：</p>
+<p><div class="language-text highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>textCopy Code
+</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>
+</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>∫ f(x) dx = F(x) + C
+</span></code></pre></div>
+   * 这里的 <code>C</code> 是任意常数，称为积分常数。因为一个函数的导数相同，其原函数之间只相差一个常数。
+   * ‌<strong>核心：</strong>‌ 求不定积分的过程，本质上就是寻找一个函数 <code>F(x)</code>，使得它的导数 <code>F'(x)</code> 等于被积函数 <code>f(x)</code>。‌<strong>不定积分“撤销”了导数的效果。</strong>‌
+2. ‌<strong>导数是不定积分的导数：</strong>‌</p>
+</li>
+<li>
+<p>如果 <code>F(x)</code> 是 <code>f(x)</code> 的一个原函数（或者说 <code>∫ f(x) dx = F(x) + C</code>），那么对这个不定积分结果求导，就会得到原来的被积函数：</p>
+<p><div class="language-text highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>textCopy Code
+</span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>
+</span><span id="__span-1-3"><a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a>d/dx [ ∫ f(x) dx ] = d/dx [F(x) + C] = F&#39;(x) + 0 = f(x)
+</span></code></pre></div>
+   * ‌<strong>核心：</strong>‌ 对一个函数先积分再求导，结果会回到原点函数（被积函数）。导数“撤销”了不定积分的效果（常数 <code>C</code> 在求导时会消失）。</p>
+</li>
+</ol>
+<h3 id="_3">总结第一部分（不定积分层面）<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h3>
+<p>‌<strong>导数和不定积分是互逆的运算（除了相差一个常数）。</strong>‌</p>
+<ul>
+<li><code>∫ F'(x) dx = F(x) + C</code></li>
+<li><code>d/dx [ ∫ f(x) dx ] = f(x)</code></li>
+</ul>
+<h2 id="-">第二部分：导数与定积分的关系 - 微积分基本定理的核心<a class="headerlink" href="#-" title="Permanent link">&para;</a></h2>
+<p>这是微积分基本定理最具威力、最实用的部分，它建立了导数和定积分（求面积）的直接联系。</p>
+<ol>
+<li>‌<strong>构造累积函数：</strong>‌ 给定一个在区间 <code>[a, b]</code> 上连续的函数 <code>f(t)</code>。定义一个新函数 <code>F(x)</code>，它在区间 <code>[a, x]</code> 上计算 <code>f(t)</code> 曲线下的面积（<code>x</code> 在 <code>[a, b]</code> 之间）：</li>
+</ol>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>textCopy Code
+</span><span id="__span-2-2"><a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a>
+</span><span id="__span-2-3"><a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a>F(x) = ∫ₐˣ f(t) dt
+</span></code></pre></div>
+<ul>
+<li>这个函数 <code>F(x)</code> 被称为 <code>f(x)</code> 的‌<strong>累积函数</strong>‌或‌<strong>面积函数</strong>‌。它表示从固定起点 <code>a</code> 到可变终点 <code>x</code> 之间，曲线 <code>f(t)</code> 下的面积。</li>
+<li>‌<strong>关键结论：</strong>‌ 微积分基本定理指出：</li>
+</ul>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>textCopy Code
+</span><span id="__span-3-2"><a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a>
+</span><span id="__span-3-3"><a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a>F&#39;(x) = d/dx [ ∫ₐˣ f(t) dt ] = f(x)
+</span></code></pre></div>
+<ul>
+<li>‌<strong>解释：</strong>‌ 累积函数 <code>F(x)</code>（即从 <code>a</code> 到 <code>x</code> 的定积分）的‌<strong>导数</strong>‌，恰好等于积分号下的原函数 <code>f</code> 在点 <code>x</code> 处的值 <code>f(x)</code>。</li>
+<li>‌<strong>几何意义：</strong>‌ 函数 <code>F(x)</code> 在某一点 <code>x</code> 处的变化率（导数），恰好等于曲线 <code>f(t)</code> 在该点 <code>x</code> 处的高度 <code>f(x)</code>。这意味着累积面积的增长速率就等于曲线的高度。</li>
+<li>
+<p>‌<strong>计算定积分的强大工具：</strong>‌ 这个定理的另一个等价表述提供了计算定积分的革命性方法：</p>
+</li>
+<li>
+<p>如果 <code>F(x)</code> 是 <code>f(x)</code> 在区间 <code>[a, b]</code> 上的‌<strong>任意一个</strong>‌原函数（即 <code>F'(x) = f(x)</code>），那么：</p>
+<p><div class="language-text highlight"><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>textCopy Code
+</span><span id="__span-4-2"><a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a>
+</span><span id="__span-4-3"><a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a>∫ₐᵇ f(x) dx = F(b) - F(a)
+</span></code></pre></div>
+   * ‌<strong>意义：</strong>‌ 要计算函数 <code>f(x)</code> 从 <code>a</code> 到 <code>b</code> 的定积分（曲线下的面积），只需要找到它的任何一个原函数 <code>F(x)</code>，然后计算该原函数在上限 <code>b</code> 的值减去在下限 <code>a</code> 的值。‌<strong>这避免了用极限定义求定积分所需的复杂计算（黎曼和）。</strong>‌
+   * 通常记作： <code>[F(x)]ₐᵇ</code> 或 <code>F(x) |ₐᵇ</code> 或 <code>F(b) - F(a)</code>。</p>
+</li>
+</ul>
+<h3 id="_4">用你的例子验证<a class="headerlink" href="#_4" title="Permanent link">&para;</a></h3>
+<ul>
+<li>‌<strong>导函数：</strong>‌ 你计算了 <code>f(x) = x²</code> 的导函数是 <code>f'(x) = 2x</code>。</li>
+<li>‌<strong>不定积分：</strong>‌</li>
+<li>根据第一部分，<code>2x</code> 的不定积分应该是 <code>x² + C</code>（因为 <code>d/dx (x² + C) = 2x</code>）。</li>
+<li><code>x²</code> 的不定积分是 <code>∫ x² dx = x³/3 + C</code>（因为 <code>d/dx (x³/3 + C) = x²</code>）。这验证了互逆关系。</li>
+<li>‌<strong>定积分（与导数的关系 - 第二部分）：</strong>‌</li>
+<li>你之前计算了 <code>∫₀¹ x² dx</code>。</li>
+<li>根据微积分基本定理第二部分：<ol>
+<li>找到 <code>f(x) = x²</code> 的一个原函数 <code>F(x) = x³/3</code>。</li>
+<li>计算 <code>F(1) - F(0) = (1³/3) - (0³/3) = 1/3 - 0 = 1/3</code>。</li>
+</ol>
+</li>
+<li>这和你之前直接计算的结果完全一致，体现了定理的强大实用性。</li>
+<li>‌<strong>累积函数与导数：</strong>‌</li>
+<li>定义累积函数 <code>F(x) = ∫₀ˣ t² dt</code>。</li>
+<li>根据微积分基本定理第二部分，<code>F'(x) = d/dx [ ∫₀ˣ t² dt ] = x²</code>。</li>
+<li>我们也知道 <code>∫₀ˣ t² dt = [t³/3]₀ˣ = x³/3</code>。</li>
+<li>对这个结果求导验证： <code>d/dx (x³/3) = x²</code>。完美符合定理结论 <code>F'(x) = f(x)</code>。</li>
+</ul>
+<h2 id="_5">总结<a class="headerlink" href="#_5" title="Permanent link">&para;</a></h2>
+<p>微积分基本定理揭示了导函数和积分函数之间深刻的、互逆的统一关系：</p>
+<ol>
+<li>‌<strong>反导数关系：</strong>‌ 不定积分是求导的逆运算（相差一个常数）。</li>
+<li>‌<strong>导数描述累积变化率：</strong>‌ 定积分（累积函数 <code>∫ₐˣ f(t) dt</code>）的导数等于被积函数 <code>f(x)</code>。导数描述了累积量（如面积）随上限变化的瞬时速率。</li>
+<li>‌<strong>原函数计算定积分：</strong>‌ 定积分 <code>∫ₐᵇ f(x) dx</code> 的值等于被积函数 <code>f(x)</code> 的任何一个原函数 <code>F(x)</code> 在积分上限 <code>b</code> 的值减去在下限 <code>a</code> 的值（<code>F(b) - F(a)</code>）。这是计算定积分最有效的方法。</li>
+</ol>
+<p>简而言之，‌<strong>微分（求导）和积分（特别是作为累计算过程的定积分）是互为逆运算的统一体</strong>‌。这个关系是微积分成为强大数学工具的基础，使我们能够通过研究变化率（导数）来理解累积量（积分），反之亦然。</p>
+<h1 id="_6">导数和定积分的关系图<a class="headerlink" href="#_6" title="Permanent link">&para;</a></h1>
+<p>以下是导数和定积分关系的可视化总结，结合几何意义与微积分基本定理的核心要点：</p>
+<hr />
+<h3 id="_7">一、几何关系图解<a class="headerlink" href="#_7" title="Permanent link">&para;</a></h3>
+<ol>
+<li>‌<strong>导数→函数变化率</strong>‌<br />
+   导数为函数曲线在某点的切线斜率（瞬时变化率），反映函数增减趋势。例如，若导数为正，原函数在该区间递增‌12。</li>
+<li>‌<strong>定积分→累积面积</strong>‌<br />
+   定积分表示函数曲线与x轴围成的有向面积（上方为正，下方为负），是导数的“逆向累积”过程‌34。</li>
+</ol>
+<hr />
+<h3 id="_8">二、微积分基本定理的核心关联<a class="headerlink" href="#_8" title="Permanent link">&para;</a></h3>
+<ol>
+<li>‌<strong>第一定理（导数与积分互逆）</strong>‌</li>
+<li>若 <code>F(x) = ∫ₐˣ f(t) dt</code>，则 <code>F'(x) = f(x)</code>，即定积分的导数等于被积函数‌45。</li>
+<li>‌<strong>几何意义</strong>‌：面积函数 <code>F(x)</code> 的瞬时变化率等于曲线高度 <code>f(x)</code>‌15。</li>
+<li>‌<strong>第二定理（计算定积分）</strong>‌</li>
+<li>若 <code>F(x)</code> 是 <code>f(x)</code> 的原函数，则 <code>∫ₐᵇ f(x) dx = F(b) - F(a)</code>，通过原函数差值求面积‌46。</li>
+</ol>
+<hr />
+<h3 id="_9">三、动态关系示例<a class="headerlink" href="#_9" title="Permanent link">&para;</a></h3>
+<ul>
+<li>‌<strong>导数→积分</strong>‌：已知速度 <code>v(t)</code>（位移的导数），通过积分 <code>∫v(t) dt</code> 可求位移‌46。</li>
+<li>‌<strong>积分→导数</strong>‌：已知面积函数 <code>F(x)</code>，求导可得曲线高度 <code>f(x)</code>‌57。</li>
+</ul>
+<hr />
+<h3 id="_10">四、关键对比总结<a class="headerlink" href="#_10" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>‌<strong>概念</strong>‌</th>
+<th>‌<strong>数学表达</strong>‌</th>
+<th>‌<strong>几何意义</strong>‌</th>
+<th>‌<strong>物理应用</strong>‌</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>导数</td>
+<td><code>f'(x) = dy/dx</code></td>
+<td>切线斜率</td>
+<td>瞬时速度、加速度</td>
+</tr>
+<tr>
+<td>定积分</td>
+<td><code>∫ₐᵇ f(x) dx</code></td>
+<td>曲线下净面积</td>
+<td>总位移、功</td>
+</tr>
+<tr>
+<td>互逆关系</td>
+<td><code>d/dx [∫ₐˣ f(t) dt] = f(x)</code></td>
+<td>面积变化率=曲线高度</td>
+<td>速度与位移的相互转化‌46</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<p>通过以上图表与关系对比，可清晰理解导数与定积分如何通过微积分基本定理实现动态统一。</p>
+<h1 id="_11">曲线高度指的是什么<a class="headerlink" href="#_11" title="Permanent link">&para;</a></h1>
+<p>在微积分的几何解释中，‌<strong>曲线高度</strong>‌指的是函数 y=f(x)y = f(x)y=f(x) 在某一特定点 xxx 处的函数值 f(x)f(x)f(x)，也就是该点在坐标系中相对于 xxx-轴的垂直距离。以下是具体说明：</p>
+<hr />
+<h3 id="1">‌<strong>1. 曲线高度的定义</strong>‌<a class="headerlink" href="#1" title="Permanent link">&para;</a></h3>
+<ul>
+<li>‌<strong>数学表达</strong>‌：对于函数 y=f(x)y = f(x)y=f(x)，在 x=ax = ax=a 处的曲线高度就是 f(a)f(a)f(a)。</li>
+<li>‌<strong>几何意义</strong>‌：</li>
+<li>在函数图像上，点 (a,f(a))(a, f(a))(a,f(a)) 到 xxx-轴的垂直距离为 ∣f(a)∣|f(a)|∣f(a)∣（如图1）。</li>
+<li>若 f(a)&gt;0f(a) &gt; 0f(a)&gt;0，高度为正（曲线位于 xxx-轴上方）；</li>
+<li>若 f(a)&lt;0f(a) &lt; 0f(a)&lt;0，高度为负（曲线位于 xxx-轴下方）。</li>
+</ul>
+<hr />
+<h3 id="2">‌<strong>2. 与导数和积分的关系</strong>‌<a class="headerlink" href="#2" title="Permanent link">&para;</a></h3>
+<h4 id="1_1">‌<strong>（1）导数视角</strong>‌<a class="headerlink" href="#1_1" title="Permanent link">&para;</a></h4>
+<ul>
+<li>导数 f′(x)f'(x)f′(x) 表示曲线在某点的‌<strong>切线斜率</strong>‌，而 f(x)f(x)f(x) 是该点的‌<strong>纵坐标值</strong>‌（高度）。</li>
+<li>‌<strong>动态关联</strong>‌：</li>
+<li>若将 f(x)f(x)f(x) 视为位置函数，f′(x)f'(x)f′(x) 是其瞬时速度（高度的变化率）。</li>
+<li>例如：自由落体中，高度 h(t)h(t)h(t) 的导数 h′(t)h'(t)h′(t) 是速度 v(t)v(t)v(t)。</li>
+</ul>
+<h4 id="2_1">‌<strong>（2）积分视角</strong>‌<a class="headerlink" href="#2_1" title="Permanent link">&para;</a></h4>
+<ul>
+<li>‌<strong>定积分</strong>‌ ∫abf(x)dx\int_a^b f(x) dx∫ab​f(x)dx 是曲线 y=f(x)y = f(x)y=f(x) 与 xxx-轴之间的‌<strong>有向面积</strong>‌，其大小取决于曲线在各点的高度 f(x)f(x)f(x)（如图2）。</li>
+<li>‌<strong>微积分基本定理</strong>‌：</li>
+<li>面积函数 F(x)=∫axf(t)dtF(x) = \int_a^x f(t) dtF(x)=∫ax​f(t)dt 的导数 F′(x)=f(x)F'(x) = f(x)F′(x)=f(x)，即面积变化率等于曲线当前高度‌12。</li>
+<li>‌<strong>几何解释</strong>‌：当 xxx 向右移动时，F(x)F(x)F(x) 的增加速率由 f(x)f(x)f(x) 的高度直接决定（如图3）。</li>
+</ul>
+<hr />
+<h3 id="3">‌<strong>3. 物理意义中的“高度”</strong>‌<a class="headerlink" href="#3" title="Permanent link">&para;</a></h3>
+<ul>
+<li>‌<strong>位移与速度</strong>‌：若 f(t)f(t)f(t) 表示物体在时间 ttt 时的高度，则 f′(t)f'(t)f′(t) 是速度（高度的瞬时变化率），而 ∫abf′(t)dt=f(b)−f(a)\int_a^b f'(t) dt = f(b) - f(a)∫ab​f′(t)dt=f(b)−f(a) 是高度变化量。</li>
+<li>‌<strong>其他应用</strong>‌：</li>
+<li>经济学中，总收益曲线的“高度”是收益值，导数是边际收益。</li>
+<li>概率中，概率密度函数 f(x)f(x)f(x) 的“高度”反映概率分布的密度。</li>
+</ul>
+<hr />
+<h3 id="4">‌<strong>4. 常见误区澄清</strong>‌<a class="headerlink" href="#4" title="Permanent link">&para;</a></h3>
+<ul>
+<li>‌<strong>高度 ≠ 斜率</strong>‌：</li>
+<li>高度是函数值 f(x)f(x)f(x)（纵坐标），而斜率是导数 f′(x)f'(x)f′(x)（切线的倾斜程度）。</li>
+<li>例如：抛物线 y=x2y = x^2y=x2 在 x=1x = 1x=1 处高度为 111，斜率为 222。</li>
+<li>‌<strong>负高度的意义</strong>‌：</li>
+<li>当 f(x)&lt;0f(x) &lt; 0f(x)&lt;0，曲线位于 xxx-轴下方，定积分计算时会抵消正面积（如图4）。</li>
+</ul>
+<hr />
+<h3 id="_12">‌<strong>总结图示</strong>‌<a class="headerlink" href="#_12" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>‌<strong>概念</strong>‌</th>
+<th>‌<strong>数学表达</strong>‌</th>
+<th>‌<strong>曲线高度的角色</strong>‌</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>函数值</td>
+<td>y=f(x)y = f(x)y=f(x)</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h1 id="_13">导数和不定积分的关系图<a class="headerlink" href="#_13" title="Permanent link">&para;</a></h1>
+<p>以下是导数和不定积分关系的可视化解析，结合几何意义与微积分基本定理的核心要点：</p>
+<hr />
+<h3 id="_14">一、核心关系图解<a class="headerlink" href="#_14" title="Permanent link">&para;</a></h3>
+<ol>
+<li>‌<strong>导数→函数变化率</strong>‌<br />
+   导数为函数曲线在某点的切线斜率（瞬时变化率），反映函数增减趋势。例如，若导数为正，原函数在该区间递增‌12。</li>
+<li>‌<strong>不定积分→原函数族</strong>‌<br />
+   不定积分是导数的逆运算，表示所有原函数的集合（相差常数C）。几何上对应斜率相同的曲线族‌34。</li>
+</ol>
+<hr />
+<h3 id="_15">二、微积分基本定理的动态关联<a class="headerlink" href="#_15" title="Permanent link">&para;</a></h3>
+<ol>
+<li>
+<p>‌<strong>互逆性</strong>‌</p>
+</li>
+<li>
+<p>导数到积分：若 <code>F(x) = ∫f(x)dx</code>，则 <code>F'(x) = f(x)</code>，即积分后求导恢复原函数‌35。</p>
+</li>
+<li>积分到导数：若 <code>F'(x) = f(x)</code>，则 <code>∫f(x)dx = F(x) + C</code>，即导数的积分得到原函数族‌78。</li>
+<li>
+<p>‌<strong>几何意义</strong>‌</p>
+</li>
+<li>
+<p>导数（切线斜率）决定原函数的增减速度；</p>
+</li>
+<li>不定积分（曲线族）的每一条曲线在相同x处的斜率相等‌19。</li>
+</ol>
+<hr />
+<h3 id="_16">三、关键对比总结<a class="headerlink" href="#_16" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>‌<strong>概念</strong>‌</th>
+<th>‌<strong>数学表达</strong>‌</th>
+<th>‌<strong>几何意义</strong>‌</th>
+<th>‌<strong>动态关系</strong>‌</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>导数</td>
+<td><code>f'(x) = dy/dx</code></td>
+<td>切线斜率（变化率）</td>
+<td>控制原函数的瞬时变化‌29</td>
+</tr>
+<tr>
+<td>不定积分</td>
+<td><code>∫f(x)dx = F(x) + C</code></td>
+<td>平行曲线族（斜率相同）</td>
+<td>逆向还原导数对应的函数‌34</td>
+</tr>
+<tr>
+<td>互逆操作</td>
+<td><code>d/dx[∫f(x)dx] = f(x)</code></td>
+<td>斜率→曲线 / 曲线→斜率</td>
+<td>构成微积分基本定理‌56</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<p>通过以上图表与动态演示，可直观理解导数与不定积分如何通过斜率与面积的互逆性实现统一‌110。</p>
+<h1 id="_17">能不能认为导数是点，不定积分是线，定积分是面？<a class="headerlink" href="#_17" title="Permanent link">&para;</a></h1>
+<p>以下是关于导数、不定积分与定积分几何意义的层级关系分析，结合数学本质与几何直观的详细说明：</p>
+<h3 id="_18">一、‌<strong>导数是“点”属性</strong>‌（瞬时性）<a class="headerlink" href="#_18" title="Permanent link">&para;</a></h3>
+<ol>
+<li>‌<strong>数学定义</strong>‌<br />
+   导数 f′(x)f'(x)f′(x) 是函数在某一点 xxx 处的‌<strong>瞬时变化率</strong>‌，通过极限 lim⁡Δx→0f(x+Δx)−f(x)Δx\lim_{\Delta x \to 0} \frac{f(x+\Delta x)-f(x)}{\Delta x}limΔx→0​Δxf(x+Δx)−f(x)​ 定义，反映函数在该点的局部行为‌12。</li>
+<li>‌<strong>几何意义</strong>‌</li>
+<li>导数对应函数图像上某点的‌<strong>切线斜率</strong>‌，是曲线在该点的线性近似‌45。</li>
+<li>‌<strong>物理类比</strong>‌：如瞬时速度是位移-时间曲线某点的切线斜率‌26。</li>
+<li>‌<strong>局限性</strong>‌：仅描述单点特性，无法直接体现整体累积效应‌13。</li>
+</ol>
+<hr />
+<h3 id="_19">二、‌<strong>不定积分是“线”属性</strong>‌（曲线族）<a class="headerlink" href="#_19" title="Permanent link">&para;</a></h3>
+<ol>
+<li>‌<strong>数学定义</strong>‌<br />
+   不定积分 ∫f(x)dx=F(x)+C\int f(x)dx = F(x) + C∫f(x)dx=F(x)+C 是导数的逆运算，表示所有原函数的集合（相差常数 CCC）‌78。</li>
+<li>‌<strong>几何意义</strong>‌</li>
+<li>不定积分对应‌<strong>一族平行曲线</strong>‌，这些曲线在相同横坐标处的切线斜率相同（即导数相同），仅通过纵向平移（CCC 的变化）区分‌810。</li>
+<li>‌<strong>物理类比</strong>‌：已知速度 v(t)v(t)v(t) 求位移 s(t)s(t)s(t)，需通过初始条件确定具体曲线（如初始位置）‌711。</li>
+</ol>
+<hr />
+<h3 id="_20">三、‌<strong>定积分是“面”属性</strong>‌（累积性）<a class="headerlink" href="#_20" title="Permanent link">&para;</a></h3>
+<ol>
+<li>‌<strong>数学定义</strong>‌<br />
+   定积分 ∫abf(x)dx\int_a^b f(x)dx∫ab​f(x)dx 是函数在区间 [a,b][a,b][a,b] 上的黎曼和极限，表示有向面积‌1213。</li>
+<li>‌<strong>几何意义</strong>‌</li>
+<li>当 f(x)≥0f(x) \geq 0f(x)≥0，定积分是曲线与 xxx-轴围成的面积；若 f(x)f(x)f(x) 有正有负，则为净面积（正负抵消）‌1314。</li>
+<li>‌<strong>物理类比</strong>‌：变速运动的位移是速度-时间曲线下的面积‌1216。</li>
+</ol>
+<hr />
+<h3 id="_21">四、三者的层级关系总结<a class="headerlink" href="#_21" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>‌<strong>概念</strong>‌</th>
+<th>‌<strong>数学对象</strong>‌</th>
+<th>‌<strong>几何对应</strong>‌</th>
+<th>‌<strong>关键特性</strong>‌</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>导数</td>
+<td>点属性（f′(x)f'(x)f′(x)）</td>
+<td>切线斜率</td>
+<td>瞬时性、局部描述‌13</td>
+</tr>
+<tr>
+<td>不定积分</td>
+<td>线属性（F(x)+CF(x)+CF(x)+C）</td>
+<td>平行曲线族</td>
+<td>全局性、需初始条件‌89</td>
+</tr>
+<tr>
+<td>定积分</td>
+<td>面属性（∫abf(x)dx\int_a^b f(x)dx∫ab​f(x)dx）</td>
+<td>有向面积</td>
+<td>累积性、与区间相关‌1314</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h3 id="_22">五、‌<strong>这种比喻的合理性与局限性</strong>‌<a class="headerlink" href="#_22" title="Permanent link">&para;</a></h3>
+<ol>
+<li>‌<strong>合理性</strong>‌</li>
+<li>直观体现了从‌<strong>局部（点）→整体（线/面）</strong>‌的数学层次：导数刻画点的变化，积分累积为线或面‌1819。</li>
+<li>符合微积分基本定理：定积分通过原函数（不定积分）计算，而原函数由导数逆向求得‌813。</li>
+<li>‌<strong>局限性</strong>‌</li>
+<li>‌<strong>导数并非孤立点</strong>‌：其定义依赖邻域极限，需函数在该点附近有定义‌12。</li>
+<li>‌<strong>积分不限于几何量</strong>‌：定积分可表示物理量（如功、概率），不定积分可解微分方程，超出几何范畴‌712。</li>
+</ol>
+<hr />
+<p>综上，用“点、线、面”比喻导数、不定积分和定积分的几何特性是直观且有效的，但需注意数学定义的完整性和应用场景的广泛性‌1819。</p>
+<h1 id="x2_1">列举原函数x^2的不定积分<a class="headerlink" href="#x2_1" title="Permanent link">&para;</a></h1>
+<h3 id="x2x2x2">‌<strong>原函数 x2x^2x2 的不定积分</strong>‌<a class="headerlink" href="#x2x2x2" title="Permanent link">&para;</a></h3>
+<h4 id="1_2">‌<strong>1. 基本计算</strong>‌<a class="headerlink" href="#1_2" title="Permanent link">&para;</a></h4>
+<p>不定积分是导数的逆运算，因此求 x2x^2x2 的不定积分，即寻找一个函数 F(x)F(x)F(x)，使得：</p>
+<p>F′(x)=x2F'(x) = x^2F′(x)=x2</p>
+<p>根据幂函数积分公式：</p>
+<p>∫xn dx=xn+1n+1+C(n≠−1)\int x^n \, dx = \frac{x^{n+1}}{n+1} + C \quad (n \neq -1)∫xndx=n+1xn+1​+C(n=−1)</p>
+<p>对于 n=2n = 2n=2：</p>
+<p>∫x2 dx=x33+C\int x^2 \, dx = \frac{x^{3}}{3} + C∫x2dx=3x3​+C</p>
+<p>其中，CCC 是‌<strong>积分常数</strong>‌（因为导数会消去常数项）。</p>
+<hr />
+<h4 id="2_2">‌<strong>2. 验证</strong>‌<a class="headerlink" href="#2_2" title="Permanent link">&para;</a></h4>
+<p>对 F(x)=x33+CF(x) = \frac{x^3}{3} + CF(x)=3x3​+C 求导：</p>
+<p>F′(x)=ddx(x33+C)=x2+0=x2F'(x) = \frac{d}{dx} \left( \frac{x^3}{3} + C \right) = x^2 + 0 = x^2F′(x)=dxd​(3x3​+C)=x2+0=x2</p>
+<p>验证正确。</p>
+<hr />
+<h4 id="3_1">‌<strong>3. 几何意义</strong>‌<a class="headerlink" href="#3_1" title="Permanent link">&para;</a></h4>
+<ul>
+<li>‌<strong>不定积分</strong>‌ ∫x2 dx=x33+C\int x^2 \, dx = \frac{x^3}{3} + C∫x2dx=3x3​+C 表示一族‌<strong>三次抛物线</strong>‌，它们在任意点 xxx 处的斜率均为 x2x^2x2（即导数相同）。</li>
+<li>‌<strong>积分常数 CCC</strong>‌ 决定了曲线的垂直平移（如 C=0C=0C=0、C=1C=1C=1、C=−2C=-2C=−2 等不同曲线）。</li>
+</ul>
+<hr />
+<h4 id="4_1">‌<strong>4. 示例曲线族</strong>‌<a class="headerlink" href="#4_1" title="Permanent link">&para;</a></h4>
+<table>
+<thead>
+<tr>
+<th>CCC 取值</th>
+<th>原函数表达式</th>
+<th>曲线特征</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>C=0C = 0C=0</td>
+<td>F(x)=x33F(x) = \frac{x^3}{3}F(x)=3x3​</td>
+<td>通过原点 (0,0)(0,0)(0,0)</td>
+</tr>
+<tr>
+<td>C=1C = 1C=1</td>
+<td>F(x)=x33+1F(x) = \frac{x^3}{3} + 1F(x)=3x3​+1</td>
+<td>整体上移 1 单位</td>
+</tr>
+<tr>
+<td>C=−2C = -2C=−2</td>
+<td>F(x)=x33−2F(x) = \frac{x^3}{3} - 2F(x)=3x3​−2</td>
+<td>整体下移 2 单位</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h4 id="5">‌<strong>5. 与定积分的关系</strong>‌<a class="headerlink" href="#5" title="Permanent link">&para;</a></h4>
+<p>若计算定积分 ∫abx2 dx\int_a^b x^2 \, dx∫ab​x2dx，可直接利用原函数：</p>
+<p>∫abx2 dx=x33∣ab=b33−a33\int_a^b x^2 \, dx = \left. \frac{x^3}{3} \right|_a^b = \frac{b^3}{3} - \frac{a^3}{3}∫ab​x2dx=3x3​​ab​=3b3​−3a3​</p>
+<p>‌<strong>几何意义</strong>‌：这是抛物线 y=x2y = x^2y=x2 在区间 [a,b][a,b][a,b] 下与 xxx-轴围成的面积（若 a≤ba \leq ba≤b 且 x2≥0x^2 \geq 0x2≥0）。</p>
+<hr />
+<h3 id="_23">‌<strong>总结</strong>‌<a class="headerlink" href="#_23" title="Permanent link">&para;</a></h3>
+<ul>
+<li>‌<strong>不定积分</strong>‌：∫x2 dx=x33+C\int x^2 \, dx = \frac{x^3}{3} + C∫x2dx=3x3​+C（一族曲线）。</li>
+<li>‌<strong>定积分</strong>‌：∫abx2 dx=b3−a33\int_a^b x^2 \, dx = \frac{b^3 - a^3}{3}∫ab​x2dx=3b3−a3​（具体面积值）。</li>
+<li>‌<strong>关键点</strong>‌：积分常数 CCC 反映原函数的不唯一性，而导数运算会消除常数项。</li>
+</ul>
+<h1 id="x33">列出导函数x^3/3的不定积分<a class="headerlink" href="#x33" title="Permanent link">&para;</a></h1>
+<h3 id="x33fracx333x3">‌<strong>导函数 x33\frac{x^3}{3}3x3​ 的不定积分</strong>‌<a class="headerlink" href="#x33fracx333x3" title="Permanent link">&para;</a></h3>
+<h4 id="1_3">‌<strong>1. 基本计算</strong>‌<a class="headerlink" href="#1_3" title="Permanent link">&para;</a></h4>
+<p>不定积分是导数的逆运算，因此求 x33\frac{x^3}{3}3x3​ 的不定积分，即寻找一个函数 F(x)F(x)F(x)，使得：</p>
+<p>F′(x)=x33F'(x) = \frac{x^3}{3}F′(x)=3x3​</p>
+<p>根据幂函数积分公式：</p>
+<p>∫xn dx=xn+1n+1+C(n≠−1)\int x^n \, dx = \frac{x^{n+1}}{n+1} + C \quad (n \neq -1)∫xndx=n+1xn+1​+C(n=−1)</p>
+<p>对于 x33\frac{x^3}{3}3x3​，可以写成：</p>
+<p>∫x33 dx=13∫x3 dx=13⋅x44+C=x412+C\int \frac{x^3}{3} \, dx = \frac{1}{3} \int x^3 \, dx = \frac{1}{3} \cdot \frac{x^{4}}{4} + C = \frac{x^4}{12} + C∫3x3​dx=31​∫x3dx=31​⋅4x4​+C=12x4​+C</p>
+<p>其中，CCC 是‌<strong>积分常数</strong>‌（因为导数会消去常数项）。</p>
+<hr />
+<h4 id="2_3">‌<strong>2. 验证</strong>‌<a class="headerlink" href="#2_3" title="Permanent link">&para;</a></h4>
+<p>对 F(x)=x412+CF(x) = \frac{x^4}{12} + CF(x)=12x4​+C 求导：</p>
+<p>F′(x)=ddx(x412+C)=4x312+0=x33F'(x) = \frac{d}{dx} \left( \frac{x^4}{12} + C \right) = \frac{4x^3}{12} + 0 = \frac{x^3}{3}F′(x)=dxd​(12x4​+C)=124x3​+0=3x3​</p>
+<p>验证正确。</p>
+<hr />
+<h4 id="3_2">‌<strong>3. 几何意义</strong>‌<a class="headerlink" href="#3_2" title="Permanent link">&para;</a></h4>
+<ul>
+<li>‌<strong>不定积分</strong>‌ ∫x33 dx=x412+C\int \frac{x^3}{3} \, dx = \frac{x^4}{12} + C∫3x3​dx=12x4​+C 表示一族‌<strong>四次曲线</strong>‌，它们在任意点 xxx 处的斜率均为 x33\frac{x^3}{3}3x3​（即导数相同）。</li>
+<li>‌<strong>积分常数 CCC</strong>‌ 决定了曲线的垂直平移（如 C=0C=0C=0、C=1C=1C=1、C=−2C=-2C=−2 等不同曲线）。</li>
+</ul>
+<hr />
+<h4 id="4_2">‌<strong>4. 示例曲线族</strong>‌<a class="headerlink" href="#4_2" title="Permanent link">&para;</a></h4>
+<table>
+<thead>
+<tr>
+<th>CCC 取值</th>
+<th>原函数表达式</th>
+<th>曲线特征</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>C=0C = 0C=0</td>
+<td>F(x)=x412F(x) = \frac{x^4}{12}F(x)=12x4​</td>
+<td>通过原点 (0,0)(0,0)(0,0)</td>
+</tr>
+<tr>
+<td>C=1C = 1C=1</td>
+<td>F(x)=x412+1F(x) = \frac{x^4}{12} + 1F(x)=12x4​+1</td>
+<td>整体上移 1 单位</td>
+</tr>
+<tr>
+<td>C=−2C = -2C=−2</td>
+<td>F(x)=x412−2F(x) = \frac{x^4}{12} - 2F(x)=12x4​−2</td>
+<td>整体下移 2 单位</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h4 id="5_1">‌<strong>5. 与定积分的关系</strong>‌<a class="headerlink" href="#5_1" title="Permanent link">&para;</a></h4>
+<p>若计算定积分 ∫abx33 dx\int_a^b \frac{x^3}{3} \, dx∫ab​3x3​dx，可直接利用原函数：</p>
+<p>∫abx33 dx=x412∣ab=b412−a412\int_a^b \frac{x^3}{3} \, dx = \left. \frac{x^4}{12} \right|_a^b = \frac{b^4}{12} - \frac{a^4}{12}∫ab​3x3​dx=12x4​​ab​=12b4​−12a4​</p>
+<p>‌<strong>几何意义</strong>‌：这是曲线 y=x33y = \frac{x^3}{3}y=3x3​ 在区间 [a,b][a,b][a,b] 下与 xxx-轴围成的面积（若 x33≥0\frac{x^3}{3} \geq 03x3​≥0）。</p>
+<hr />
+<h3 id="_24">‌<strong>总结</strong>‌<a class="headerlink" href="#_24" title="Permanent link">&para;</a></h3>
+<ul>
+<li>‌<strong>不定积分</strong>‌：( \int \frac{x^3}{3} , dx = \frac{x^4}{12}</li>
+</ul>
+<h1 id="_25">原函数是指中学里学习的函数吗？<a class="headerlink" href="#_25" title="Permanent link">&para;</a></h1>
+<p>原函数（Primitive Function）与中学阶段学习的函数概念既有联系又有本质区别，具体分析如下：</p>
+<hr />
+<h3 id="1_4">‌<strong>1. 定义对比</strong>‌<a class="headerlink" href="#1_4" title="Permanent link">&para;</a></h3>
+<ul>
+<li>‌<strong>中学函数</strong>‌<br />
+  初中阶段将函数定义为“变量间的对应关系”，强调因变量 yyy 随自变量 xxx 变化的唯一性16。高中进一步抽象为集合间的映射关系 y=f(x)y=f(x)y=f(x)，但未涉及导数和积分16。</li>
+<li>‌<strong>原函数</strong>‌<br />
+  原函数是微积分中的概念，指对于给定函数 f(x)f(x)f(x)，若存在可导函数 F(x)F(x)F(x) 满足 F′(x)=f(x)F'(x)=f(x)F′(x)=f(x)，则 F(x)F(x)F(x) 称为 f(x)f(x)f(x) 的原函数23。其核心是‌<strong>导数的逆运算</strong>‌，与中学函数的定义无直接关联68。</li>
+</ul>
+<hr />
+<h3 id="2_4">‌<strong>2. 学习阶段与知识基础</strong>‌<a class="headerlink" href="#2_4" title="Permanent link">&para;</a></h3>
+<ul>
+<li>‌<strong>中学函数</strong>‌<br />
+  属于初等数学范畴，研究函数的定义、图像、性质（如单调性、奇偶性）及具体类型（一次、二次、指数函数等）16。</li>
+<li>‌<strong>原函数</strong>‌<br />
+  属于高等数学内容，需以‌<strong>导数</strong>‌为基础，是积分学的核心概念，通常在大学阶段系统学习79。</li>
+</ul>
+<hr />
+<h3 id="3_3">‌<strong>3. 典型应用差异</strong>‌<a class="headerlink" href="#3_3" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>‌<strong>对比项</strong>‌</th>
+<th>‌<strong>中学函数</strong>‌</th>
+<th>‌<strong>原函数</strong>‌</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>‌<strong>核心问题</strong>‌</td>
+<td>求解析式、画图像、解方程</td>
+<td>求导数的逆运算（如计算面积、解微分方程）912</td>
+</tr>
+<tr>
+<td>‌<strong>工具依赖</strong>‌</td>
+<td>代数运算、图像分析</td>
+<td>微积分（极限、导数、积分法则）78</td>
+</tr>
+<tr>
+<td>‌<strong>实例</strong>‌</td>
+<td>y=2x+1y=2x+1y=2x+1 的图像与性质</td>
+<td>∫2x dx=x2+C\int 2x \, dx = x^2 + C∫2xdx=x2+C 的求解810</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h3 id="4_3">‌<strong>4. 联系与进阶</strong>‌<a class="headerlink" href="#4_3" title="Permanent link">&para;</a></h3>
+<ul>
+<li>‌<strong>衔接点</strong>‌：原函数的计算常以中学函数（如多项式、三角函数）为被积对象710。</li>
+<li>‌<strong>本质区别</strong>‌：原函数的存在性依赖于函数的‌<strong>连续性</strong>‌和‌<strong>可导性</strong>‌，而中学函数仅关注对应关系本身36。</li>
+</ul>
+<hr />
+<h3 id="_26">‌<strong>总结</strong>‌<a class="headerlink" href="#_26" title="Permanent link">&para;</a></h3>
+<p>原函数并非中学函数的直接延伸，而是微积分中基于导数的新概念24。两者分属不同的数学层次，前者是后者的必要基础，但研究目标和工具截然不同616。</p>
+<h1 id="fx">F′(x)表示什么<a class="headerlink" href="#fx" title="Permanent link">&para;</a></h1>
+<h3 id="fx_1">‌<strong>f′(x) 的数学含义</strong>‌<a class="headerlink" href="#fx_1" title="Permanent link">&para;</a></h3>
+<h4 id="1_5">‌<strong>1. 基本定义</strong>‌<a class="headerlink" href="#1_5" title="Permanent link">&para;</a></h4>
+<p>f′(x) 表示函数 f(x) 的‌<strong>导函数</strong>‌（简称导数），用于描述原函数 f(x) 在每一点处的瞬时变化率或斜率12。其严格定义为极限：</p>
+<p>f′(x)=lim⁡Δx→0f(x+Δx)−f(x)Δxf'(x) = \lim_{\Delta x \to 0} \frac{f(x+\Delta x) - f(x)}{\Delta x}f′(x)=Δx→0lim​Δxf(x+Δx)−f(x)​</p>
+<p>这一极限值反映了函数在 x 点附近的局部线性逼近特性24。</p>
+<hr />
+<h4 id="2_5">‌<strong>2. 几何意义</strong>‌<a class="headerlink" href="#2_5" title="Permanent link">&para;</a></h4>
+<ul>
+<li>‌<strong>切线斜率</strong>‌：f′(x₀) 表示函数 f(x) 在点 x₀ 处切线的斜率35。</li>
+<li>‌<strong>曲线变化趋势</strong>‌：</li>
+<li>f′(x) &gt; 0：函数在该区间单调递增7；</li>
+<li>f′(x) &lt; 0：函数单调递减7；</li>
+<li>f′(x) = 0：可能对应极值点或驻点7。</li>
+</ul>
+<hr />
+<h4 id="3_4">‌<strong>3. 与导数值的区别</strong>‌<a class="headerlink" href="#3_4" title="Permanent link">&para;</a></h4>
+<ul>
+<li>‌<strong>导函数 f′(x)</strong>‌：是定义在 f(x) 全体可导点上的新函数14。</li>
+<li>‌<strong>导数值 f′(x₀)</strong>‌：是导函数在某具体点 x₀ 的函数值，为一个常数56。例如，f′(x₀) 的导数为 0（即 [f′(x₀)]′ = 0）6。</li>
+</ul>
+<hr />
+<h4 id="4_4">‌<strong>4. 高阶导数</strong>‌<a class="headerlink" href="#4_4" title="Permanent link">&para;</a></h4>
+<ul>
+<li>‌<strong>二阶导数 f″(x)</strong>‌：表示导函数 f′(x) 的导数，反映原函数的凹凸性或加速度特性79。</li>
+<li>f″(x) &gt; 0：函数图像上凸（凹向上）；</li>
+<li>f″(x) &lt; 0：函数图像下凸（凹向下）7。</li>
+</ul>
+<hr />
+<h3 id="_27">‌<strong>总结</strong>‌<a class="headerlink" href="#_27" title="Permanent link">&para;</a></h3>
+<ul>
+<li>‌<strong>符号本质</strong>‌：f′(x) 是微积分中表示函数变化率的标准化符号，继承自函数符号体系 f(x)48。</li>
+<li>‌<strong>核心作用</strong>‌：通过导数可分析函数的单调性、极值、切线等性质，是连接初等数学与高等数学的关键工具</li>
+</ul>
+<h1 id="fxfx-y">为什么这两个相等？ F′(x)=f(x) 。是否前者是斜率，后者是y轴高度<a class="headerlink" href="#fxfx-y" title="Permanent link">&para;</a></h1>
+<p>你提到的等式 ‌<strong>F′(x) = f(x)</strong>‌ 是微积分基本定理（Fundamental Theorem of Calculus）的核心内容之一，它揭示了‌<strong>导数（斜率）</strong>‌和‌<strong>原函数（高度）</strong>‌之间的深刻联系。下面详细解释为什么两者相等，以及它们的几何和物理意义。</p>
+<hr />
+<h3 id="1_6">‌<strong>1. 数学定义</strong>‌<a class="headerlink" href="#1_6" title="Permanent link">&para;</a></h3>
+<ul>
+<li>‌<strong>F(x)</strong>‌ 是 ‌<strong>f(x)</strong>‌ 的一个‌<strong>原函数（不定积分）</strong>‌，即：
+  F(x)=∫f(x) dx+CF(x) = \int f(x) \, dx + CF(x)=∫f(x)dx+C</li>
+<li>‌<strong>F′(x)</strong>‌ 是 ‌<strong>F(x)</strong>‌ 的导数，表示 ‌<strong>F(x)</strong>‌ 在每一点的‌<strong>瞬时变化率（斜率）</strong>‌。</li>
+</ul>
+<p>根据微积分基本定理：</p>
+<p>F′(x)=ddx(∫f(x) dx)=f(x)F'(x) = \frac{d}{dx} \left( \int f(x) \, dx \right) = f(x)F′(x)=dxd​(∫f(x)dx)=f(x)</p>
+<p>‌<strong>这意味着：</strong>‌</p>
+<ul>
+<li>‌<strong>求导</strong>‌和‌<strong>积分</strong>‌是互逆运算。</li>
+<li>‌<strong>F(x)</strong>‌ 的斜率（F′(x)）正好等于被积函数 ‌<strong>f(x)</strong>‌ 在该点的值。</li>
+</ul>
+<hr />
+<h3 id="2_6">‌<strong>2. 几何解释</strong>‌<a class="headerlink" href="#2_6" title="Permanent link">&para;</a></h3>
+<h4 id="1-fx">‌<strong>(1) F(x) 是 "面积累积函数"</strong>‌<a class="headerlink" href="#1-fx" title="Permanent link">&para;</a></h4>
+<p>假设 ‌<strong>f(x)</strong>‌ 是一个连续函数，‌<strong>F(x)</strong>‌ 可以理解为：</p>
+<p>F(x)=∫axf(t) dtF(x) = \int_a^x f(t) \, dtF(x)=∫ax​f(t)dt</p>
+<p>即从某个固定点 ‌<strong>a</strong>‌ 到 ‌<strong>x</strong>‌ 之间，‌<strong>f(x)</strong>‌ 曲线下的‌<strong>面积</strong>‌（带符号，即上方为正，下方为负）。</p>
+<h4 id="2-fx-fx">‌<strong>(2) F′(x) = f(x) 的直观理解</strong>‌<a class="headerlink" href="#2-fx-fx" title="Permanent link">&para;</a></h4>
+<ul>
+<li>‌<strong>F(x)</strong>‌ 表示从 ‌<strong>a</strong>‌ 到 ‌<strong>x</strong>‌ 的累积面积。</li>
+<li>‌<strong>F′(x)</strong>‌ 是 ‌<strong>F(x)</strong>‌ 的变化率，即 ‌<strong>x</strong>‌ 稍微增加 ‌<strong>Δx</strong>‌ 时，面积的增量 ‌<strong>ΔF ≈ f(x)Δx</strong>‌。</li>
+<li>因此，‌<strong>F′(x)</strong>‌ 就是 ‌<strong>f(x)</strong>‌，即 ‌<strong>f(x)</strong>‌ 给出了 ‌<strong>F(x)</strong>‌ 的增长速率。</li>
+</ul>
+<p>‌<strong>举例：</strong>‌</p>
+<ul>
+<li>如果 ‌<strong>f(x)</strong>‌ 是速度，‌<strong>F(x)</strong>‌ 就是位移（位置变化）。</li>
+<li>‌<strong>F′(x)</strong>‌（位移的导数）= ‌<strong>f(x)</strong>‌（速度），符合物理直觉。</li>
+</ul>
+<hr />
+<h3 id="3_5">‌<strong>3. 物理意义</strong>‌<a class="headerlink" href="#3_5" title="Permanent link">&para;</a></h3>
+<ul>
+<li>‌<strong>f(x)</strong>‌ 可以代表：</li>
+<li>‌<strong>速度</strong>‌（如果 ‌<strong>F(x)</strong>‌ 是位移）</li>
+<li>‌<strong>加速度</strong>‌（如果 ‌<strong>F(x)</strong>‌ 是速度）</li>
+<li>‌<strong>功率</strong>‌（如果 ‌<strong>F(x)</strong>‌ 是能量）</li>
+<li>‌<strong>F′(x) = f(x)</strong>‌ 表明：</li>
+<li>‌<strong>变化率（导数）</strong>‌ 和 ‌<strong>累积量（积分）</strong>‌ 是同一现象的两个视角。</li>
+</ul>
+<hr />
+<h3 id="4-fx-fx">‌<strong>4. 为什么不是 "F(x) 高度，F′(x) 斜率"？</strong>‌<a class="headerlink" href="#4-fx-fx" title="Permanent link">&para;</a></h3>
+<ul>
+<li>‌<strong>F(x)</strong>‌ 确实代表 ‌<strong>y 轴高度</strong>‌（原函数的值）。</li>
+<li>‌<strong>F′(x)</strong>‌ 是 ‌<strong>F(x)</strong>‌ 的斜率（变化率）。</li>
+<li>但 ‌<strong>f(x)</strong>‌ 不是直接代表高度，而是 ‌<strong>F(x) 的斜率</strong>‌，即：
+  斜率=F′(x)=f(x)\text{斜率} = F'(x) = f(x)斜率=F′(x)=f(x)
+  所以 ‌<strong>f(x)</strong>‌ 描述的是 ‌<strong>F(x)</strong>‌ 如何变化，而不是 ‌<strong>F(x)</strong>‌ 本身的值。</li>
+</ul>
+<hr />
+<h3 id="5_2">‌<strong>5. 举例验证</strong>‌<a class="headerlink" href="#5_2" title="Permanent link">&para;</a></h3>
+<p>‌<strong>例子1：线性函数</strong>‌</p>
+<ul>
+<li>设 ‌<strong>f(x) = 2x</strong>‌，则它的一个原函数是：
+  F(x)=x2+CF(x) = x^2 + CF(x)=x2+C</li>
+<li>计算导数：
+  F′(x)=2x=f(x)F'(x) = 2x = f(x)F′(x)=2x=f(x)
+  符合 ‌<strong>F′(x) = f(x)</strong>‌。</li>
+</ul>
+<p>‌<strong>例子2：三角函数</strong>‌</p>
+<ul>
+<li>设 ‌<strong>f(x) = cos x</strong>‌，则它的一个原函数是：
+  F(x)=sin⁡x+CF(x) = \sin x + CF(x)=sinx+C</li>
+<li>计算导数：
+  F′(x)=cos⁡x=f(x)F'(x) = \cos x = f(x)F′(x)=cosx=f(x)
+  仍然成立。</li>
+</ul>
+<hr />
+<h3 id="6">‌<strong>6. 总结</strong>‌<a class="headerlink" href="#6" title="Permanent link">&para;</a></h3>
+<ul>
+<li>‌<strong>F′(x) = f(x)</strong>‌ 表明：</li>
+<li>‌<strong>积分（求原函数）</strong>‌ 和 ‌<strong>求导</strong>‌ 是互逆运算。</li>
+<li>‌<strong>F(x)</strong>‌ 的斜率（F′(x)）就是被积函数 ‌<strong>f(x)</strong>‌。</li>
+<li>‌<strong>几何上</strong>‌：</li>
+<li>‌<strong>F(x)</strong>‌ 是 ‌<strong>f(x)</strong>‌ 的累积面积函数。</li>
+<li>‌<strong>F′(x)</strong>‌ 是 ‌<strong>f(x)</strong>‌，即面积变化的瞬时速率。</li>
+<li>‌<strong>物理上</strong>‌：</li>
+<li>如果 ‌<strong>f(x)</strong>‌ 是速度，‌<strong>F(x)</strong>‌ 就是位移，‌<strong>F′(x)</strong>‌ 又回到速度。</li>
+</ul>
+<p>这个关系是微积分的核心，连接了 ‌<strong>斜率（导数）</strong>‌ 和 ‌<strong>高度（积分）</strong>‌，使得我们可以通过导数研究函数的增长，或者通过积分计算累积量。</p>
+<h1 id="fx_2">所以F(x)指的中学的函数吗？<a class="headerlink" href="#fx_2" title="Permanent link">&para;</a></h1>
+<h3 id="fx_3">‌<strong>F(x) 与中学函数的区别与联系</strong>‌<a class="headerlink" href="#fx_3" title="Permanent link">&para;</a></h3>
+<p>你的问题涉及微积分和中学数学的衔接，下面用清晰的对比和例子说明：</p>
+<hr />
+<h4 id="1_7">‌<strong>1. 中学的 "函数" 是什么？</strong>‌<a class="headerlink" href="#1_7" title="Permanent link">&para;</a></h4>
+<ul>
+<li>‌<strong>定义</strong>‌：中学阶段（初等数学）的函数 ‌<strong>y = f(x)</strong>‌ 描述两个变量之间的依赖关系，例如：</li>
+<li>线性函数：f(x)=2x+1f(x) = 2x + 1f(x)=2x+1</li>
+<li>二次函数：f(x)=x2f(x) = x^2f(x)=x2</li>
+<li>‌<strong>核心内容</strong>‌：研究函数的‌<strong>解析式、图像、单调性、对称性</strong>‌等，‌<strong>不涉及导数和积分</strong>‌。</li>
+</ul>
+<hr />
+<h4 id="2-fx">‌<strong>2. 微积分中的 F(x) 是什么？</strong>‌<a class="headerlink" href="#2-fx" title="Permanent link">&para;</a></h4>
+<ul>
+<li>‌<strong>定义</strong>‌：若 ‌<strong>F'(x) = f(x)</strong>‌，则 ‌<strong>F(x)</strong>‌ 称为 ‌<strong>f(x)</strong>‌ 的‌<strong>原函数</strong>‌（或不定积分）。例如：</li>
+<li>若 f(x)=2xf(x) = 2xf(x)=2x，则 F(x)=x2+CF(x) = x^2 + CF(x)=x2+C（因为 ddx(x2)=2x\frac{d}{dx}(x^2) = 2xdxd​(x2)=2x）。</li>
+<li>‌<strong>核心内容</strong>‌：研究函数之间的‌<strong>导数与积分关系</strong>‌，属于高等数学范畴。</li>
+</ul>
+<hr />
+<h4 id="3_6">‌<strong>3. 关键区别</strong>‌<a class="headerlink" href="#3_6" title="Permanent link">&para;</a></h4>
+<table>
+<thead>
+<tr>
+<th>‌<strong>对比项</strong>‌</th>
+<th>‌<strong>中学函数 f(x)</strong>‌</th>
+<th>‌<strong>微积分中的 F(x)</strong>‌</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>‌<strong>数学层次</strong>‌</td>
+<td>初等数学（代数、图像分析）</td>
+<td>高等数学（微积分）</td>
+</tr>
+<tr>
+<td>‌<strong>核心操作</strong>‌</td>
+<td>代入求值、画图、解方程</td>
+<td>求导、积分、解微分方程</td>
+</tr>
+<tr>
+<td>‌<strong>变量关系</strong>‌</td>
+<td>描述 y 如何随 x 变化</td>
+<td>描述 F(x) 如何由 f(x) 的积分得到</td>
+</tr>
+<tr>
+<td>‌<strong>典型问题</strong>‌</td>
+<td>求 f(3)f(3)f(3) 的值或函数零点</td>
+<td>求 ∫f(x)dx\int f(x)dx∫f(x)dx 或验证 F′(x)=f(x)F'(x) = f(x)F′(x)=f(x)</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h4 id="4_5">‌<strong>4. 联系与进阶</strong>‌<a class="headerlink" href="#4_5" title="Permanent link">&para;</a></h4>
+<ul>
+<li>‌<strong>共同点</strong>‌：两者都使用 ‌<strong>f(x)、F(x)</strong>‌ 等符号表示函数关系，形式上相似。</li>
+<li>‌<strong>本质差异</strong>‌：</li>
+<li>中学的 ‌<strong>f(x)</strong>‌ 是静态的变量关系；</li>
+<li>微积分的 ‌<strong>F(x)</strong>‌ 是动态的（与导数、积分、变化率相关）。</li>
+<li>‌<strong>过渡示例</strong>‌：</li>
+<li>中学：已知 f(x)=3x2f(x) = 3x^2f(x)=3x2，求 f(2)=12f(2) = 12f(2)=12；</li>
+<li>微积分：已知 F′(x)=3x2F'(x) = 3x^2F′(x)=3x2，求 F(x)=x3+CF(x) = x^3 + CF(x)=x3+C。</li>
+</ul>
+<hr />
+<h4 id="5_3">‌<strong>5. 为什么容易混淆？</strong>‌<a class="headerlink" href="#5_3" title="Permanent link">&para;</a></h4>
+<ul>
+<li>‌<strong>符号相同</strong>‌：均用 ‌<strong>f(x)、F(x)</strong>‌ 表示函数，但上下文不同。</li>
+<li>‌<strong>中学未接触导数</strong>‌：原函数的概念需要以导数为前提，中学阶段尚未学习。</li>
+</ul>
+<hr />
+<h3 id="_28">‌<strong>总结</strong>‌<a class="headerlink" href="#_28" title="Permanent link">&para;</a></h3>
+<ul>
+<li>‌<strong>F(x) 不是中学的函数</strong>‌，而是微积分中由导数定义的‌<strong>原函数</strong>‌，二者属于不同数学层次。</li>
+<li>‌<strong>中学函数</strong>‌是微积分中 ‌<strong>f(x)</strong>‌ 的基础，而 ‌<strong>F(x)</strong>‌ 是 ‌<strong>f(x)</strong>‌ 的高阶扩展（积分形式）。</li>
+<li>‌<strong>类比</strong>‌：<br />
+  中学的 f(x)f(x)f(x) 像“静止的照片”，而微积分的 F(x)F(x)F(x) 像“照片背后的动态变化过程”。</li>
+</ul>
+<h1 id="_29">原函数指的不定积分函数吗？<a class="headerlink" href="#_29" title="Permanent link">&para;</a></h1>
+<h3 id="_30">‌<strong>原函数与不定积分的关系</strong>‌<a class="headerlink" href="#_30" title="Permanent link">&para;</a></h3>
+<h4 id="1_8">‌<strong>1. 定义区分</strong>‌<a class="headerlink" href="#1_8" title="Permanent link">&para;</a></h4>
+<ul>
+<li><strong>原函数</strong>‌：若 ‌<strong>F'(x) = f(x)</strong>‌，则 ‌<strong>F(x)</strong>‌ 称为 ‌<strong>f(x)</strong>‌ 的一个原函数26。</li>
+<li>例如，对于 f(x)=2xf(x) = 2xf(x)=2x，其原函数为 F(x)=x2+CF(x) = x^2 + CF(x)=x2+C（C为任意常数）6。</li>
+<li>‌<strong>不定积分</strong>‌：是 ‌<strong>f(x)</strong>‌ 的全体原函数的集合，记作 ∫f(x)dx=F(x)+C\int f(x)dx = F(x) + C∫f(x)dx=F(x)+C（C为任意常数）13。</li>
+<li>不定积分强调“所有可能的原函数”，而原函数是其中的一个具体实例14。</li>
+</ul>
+<h4 id="2_7">‌<strong>2. 联系与区别</strong>‌<a class="headerlink" href="#2_7" title="Permanent link">&para;</a></h4>
+<ul>
+<li>‌<strong>联系</strong>‌：</li>
+<li>不定积分的结果是原函数的集合，即 ∫f(x)dx\int f(x)dx∫f(x)dx 包含所有满足 F′(x)=f(x)F'(x) = f(x)F′(x)=f(x) 的函数34。</li>
+<li>两者在计算上等价，例如求 ∫2xdx\int 2x dx∫2xdx 和求 2x2x2x 的原函数均得到 x2+Cx^2 + Cx2+C67。</li>
+<li>‌<strong>区别</strong>‌：</li>
+<li>‌<strong>原函数</strong>‌是单个函数（如 x2+3x^2 + 3x2+3），‌<strong>不定积分</strong>‌是函数族（如 x2+Cx^2 + Cx2+C）14。</li>
+<li>不定积分的符号 ∫\int∫ 表示“求全体原函数”的操作，而原函数是操作的结果之一36。</li>
+</ul>
+<h4 id="3_7">‌<strong>3. 几何意义</strong>‌<a class="headerlink" href="#3_7" title="Permanent link">&para;</a></h4>
+<ul>
+<li>‌<strong>原函数</strong>‌：代表一条具体的积分曲线（如 y=x2+1y = x^2 + 1y=x2+1）46。</li>
+<li>‌<strong>不定积分</strong>‌：代表一族平行曲线（如 y=x2+Cy = x^2 + Cy=x2+C），这些曲线在垂直方向上平移得到46。</li>
+</ul>
+<h4 id="4_6">‌<strong>4. 数学表述</strong>‌<a class="headerlink" href="#4_6" title="Permanent link">&para;</a></h4>
+<ul>
+<li>若 F(x)F(x)F(x) 是 f(x)f(x)f(x) 的一个原函数，则不定积分可表示为：
+  ∫f(x)dx=F(x)+C\int f(x)dx = F(x) + C∫f(x)dx=F(x)+C
+  其中 ‌<strong>C</strong>‌ 为任意常数，体现原函数的无穷性23。</li>
+</ul>
+<h4 id="5_4">‌<strong>5. 常见误解澄清</strong>‌<a class="headerlink" href="#5_4" title="Permanent link">&para;</a></h4>
+<ul>
+<li><strong>“原函数=不定积分”</strong>：严格来说，原函数是集合中的元素，不定积分是集合本身14。  </li>
+<li><strong>常数C的作用</strong>‌：不定积分中的 ‌<strong>C</strong>‌ 确保涵盖所有可能的原函数，而单个原函数对应某个特定的 ‌<strong>C</strong>‌ 值。</li>
+</ul>
+<hr />
+<h3 id="_31">‌<strong>总结</strong>‌<a class="headerlink" href="#_31" title="Permanent link">&para;</a></h3>
+<ul>
+<li>‌<strong>原函数</strong>‌ 是 ‌<strong>不定积分</strong>‌ 的一个具体实例，而不定积分是原函数的全体集合13。</li>
+<li>两者在微积分中紧密关联，但概念上存在个体与整体的差异47。</li>
+</ul>
+
+
+  <nav class="md-tags" >
+    
+      
+      
+      
+      
+        <span class="md-tag">calculus</span>
+      
+    
+  </nav>
+
+
+
+
+
+
+
+
+  
+  
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+  <script>var tabs=__md_get("__tabs");if(Array.isArray(tabs))e:for(var set of document.querySelectorAll(".tabbed-set")){var labels=set.querySelector(".tabbed-labels");for(var tab of tabs)for(var label of labels.getElementsByTagName("label"))if(label.innerText.trim()===tab){var input=document.getElementById(label.htmlFor);input.checked=!0;continue e}}</script>
+
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="lucide lucide-circle-arrow-up" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="m16 12-4-4-4 4M12 16V8"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+      
+      <nav class="md-footer__inner md-grid" aria-label="Footer" >
+        
+          
+          <a href="../c-signal-and-exception/" class="md-footer__link md-footer__link--prev" aria-label="Previous: c++ 信号和异常">
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="lucide lucide-arrow-left" viewBox="0 0 24 24"><path d="m12 19-7-7 7-7M19 12H5"/></svg>
+            </div>
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Previous
+              </span>
+              <div class="md-ellipsis">
+                c++ 信号和异常
+              </div>
+            </div>
+          </a>
+        
+        
+          
+          <a href="../carry-bit-overflow-bit/" class="md-footer__link md-footer__link--next" aria-label="Next: 进位位和溢出位(carry bit&#x2f;overflow bit)">
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Next
+              </span>
+              <div class="md-ellipsis">
+                进位位和溢出位(carry bit/overflow bit)
+              </div>
+            </div>
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="lucide lucide-arrow-right" viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+            </div>
+          </a>
+        
+      </nav>
+    
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      Copyright &copy; 2025 The authors
+
+    </div>
+  
+  
+    Made with
+    <a href="https://zensical.org/" target="_blank" rel="noopener">
+      Zensical
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      
+      <script id="__config" type="application/json">{"annotate":null,"base":"..","features":["announce.dismiss","content.code.annotate","content.code.copy","content.code.select","content.footnote.tooltips","content.tabs.link","content.tooltips","navigation.footer","navigation.indexes","navigation.instant","navigation.instant.prefetch","navigation.path","navigation.sections","navigation.top","navigation.tracking","search.highlight"],"search":"../assets/javascripts/workers/search.5e1f2129.min.js","tags":null,"translations":{"clipboard.copied":"Copied to clipboard","clipboard.copy":"Copy to clipboard","search.result.more.one":"1 more on this page","search.result.more.other":"# more on this page","search.result.none":"No matching documents","search.result.one":"1 matching document","search.result.other":"# matching documents","search.result.placeholder":"Type to start searching","search.result.term.missing":"Missing","select.version":"Select version"},"version":null}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.1193bd74.min.js"></script>
+      
+    
+  </body>
+</html>
